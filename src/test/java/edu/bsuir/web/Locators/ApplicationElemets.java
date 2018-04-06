@@ -1,22 +1,8 @@
-package edu.bsuir.web;
+package edu.bsuir.web.Locators;
 
 import org.openqa.selenium.By;
 
-public class LoginElements {
-    public static final String URL = "http://testing.cld.iba.by/";
-    public static final String URL1 = "http://testing.cld.iba.by/web/guest/recruiting";
-    public static final String URL2 = "http://testing.cld.iba.by/web/guest/recruiting/applications/-/applications/createApplication";
-
-    public static final By LOGIN = By.xpath("//input[@id='_58_login']");
-    public static final By PASSWORD = By.xpath("//input[@id='_58_password']");
-    public static final By LOGIN_BUTTON = By.xpath("//div[@class = 'button-holder ']//button");
-
-    public static final By USERNAME = By.xpath("//div[@class = 'float-box']//div//h3");
-
-    public static final By CELL = By.xpath("//a[@href = 'http://testing.cld.iba.by/web/guest/recruiting']");
-    public static final By FLOATBOX = By.xpath("//div[@class = 'float-box']//div//h3");
-    public static final By REQUEST = By.xpath("//*[@id=\"addRequest\"]/div[2]/div[2]/a");
-
+public class ApplicationElemets implements GeneralReference {
     public static final By POSITION = By.xpath("//*[@id=\"name\"]");
     public static final By PLANNED_CLOSING_DATE = By.xpath("//*[@id=\"plannedClosingDate\"]");
     public static final By PRIORITY_RADIO_BTN = By.xpath("//*[@value = '2']");
@@ -50,8 +36,4 @@ public class LoginElements {
     public static final By JS = By.xpath("//span[text() = 'JavaScript']");
     public static final By CSS3 = By.xpath("//span[text() = 'CSS3']");
     public static final By HTML = By.xpath("//span[text() = 'HTML']");
-
-    public static By getLoginButton(String name){
-        return By.xpath("//button[text()" + " ']");
-    }
 }
