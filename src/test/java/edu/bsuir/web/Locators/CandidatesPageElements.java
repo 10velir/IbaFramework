@@ -13,7 +13,8 @@ public class CandidatesPageElements implements GeneralReference{
     public static final By VACANCY_DESIGNER = By.xpath("//*[@id = 'vacancy_filtermultiselect-0']");
     public static final By RELOCATION_AVAILABLE = By.xpath("//*[@id = 'relocation_Available']");
     public static final By RELOCATION_UNAVAILABLE = By.xpath("//*[@id = 'relocation_Unavailable']");
-    public static final By EDUCATION_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1522821553428_1329']");
+
+    public static final By EDUCATION_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1523040756855_3916']");
     public static final By SEARCH_INPUT = By.xpath("//*[@id = 'searchInput']");
     public static final By EDUCATION_NOT_INDICATED = By.xpath("//*[@id = 'education_filtermultiselect-0']");
     public static final By GENERAL_SECONDARY_EDUCATION = By.xpath("//*[@id = 'education_filtermultiselect-1']");
@@ -21,16 +22,16 @@ public class CandidatesPageElements implements GeneralReference{
     public static final By SECONDARY_SPECIAL_EDUCATION = By.xpath("//*[@id = 'education_filtermultiselect-3']");
     public static final By HIGHER_EDUCATION = By.xpath("//*[@id = 'education_filtermultiselect-4']");
     public static final By NONGRADUATED_HIGHER_EDUCATION = By.xpath("//*[@id = 'education_filtermultiselect-5']");
-    public static final By UNIVERCITIES_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1522821553428_1375']");
-    public static final By BSY = By.xpath("//*[@id = 'universities_filtermultiselect-0']");
+    public static final By UNIVERCITIES_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1523040756855_3941']");
+    public static final By BSU = By.xpath("//*[@id = 'universities_filtermultiselect-0']");
     public static final By BSUIR = By.xpath("//*[@id = 'universities_filtermultiselect-1']");
     public static final By BSEU = By.xpath("//*[@id = 'universities_filtermultiselect-2']");
     public static final By BSTU = By.xpath("//*[@id = 'universities_filtermultiselect-3']");
-    public static final By COMPETENCE_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1522821553428_1384']");
+    public static final By COMPETENCE_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1523040756855_3952']");
     public static final By MC_ACCESS = By.xpath("//*[@id = 'competencies_filtermultiselect-0']");
     public static final By ENGLISH = By.xpath("//*[@id = 'competencies_filtermultiselect-1']");
     public static final By CLEAR_FILTER = By.xpath("//*[@id = 'filter-clear-link']");
-
+    public static final By CREATE_PROFILE_BUTTON = By.xpath("//*[@id = 'createProfileButton']");
 
 
 

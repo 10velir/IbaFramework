@@ -1,8 +1,10 @@
 package edu.bsuir.test;
 
+import edu.bsuir.driver.WebDriverSingleton;
 import edu.bsuir.web.Locators.GeneralReference;
 import edu.bsuir.web.pages.CandidatesPage;
 import edu.bsuir.web.pages.LoginPage;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,37 +13,6 @@ public class TestFilter {
     CandidatesPage cp = new CandidatesPage();
     LoginPage lp = new LoginPage();
 
-    @Test
-    public void filterTest() throws Exception {
-        cp.goToCandidatesPage();
-        cp.clickStatusNew();
-        cp.driverWait(20);
-        cp.clickStatusOnApprovalForTheVacancy();
-        cp.driverWait(20);
-        cp.clickStatusAvailableForApproval();
-        cp.driverWait(20);
-        cp.clickStatusHired();
-        cp.clickChoiceVacancy();
-        cp.clickVacancyDesigner();
-        cp.clickRelocationUnavailable();
-        cp.clickEducationList();
-        cp.clickHigherEducation();
-        cp.clickUnivercitiesList();
-        cp.clickBSU();
-        cp.clickCompetenceList();
-        cp.clickMCAccess();
-    }
-
-    @Test
-    public void isCandidatesPageTest() throws Exception{
-        cp.goToMainPage();
-        cp.goToCandidatesPage();
-        cp.driverWait(20);
-        Assert.assertEquals(GeneralReference.CANDIDATES_PAGE, cp.getCurrentUr1());
-        System.out.println(GeneralReference.CANDIDATES_PAGE );
-        System.out.println(cp.getCurrentUr1());
-    }
-
     @Before
     public void loginTestForFilter() throws Exception {
         lp.goToMainPage();
@@ -49,6 +20,56 @@ public class TestFilter {
         lp.typePassword("welcome");
         lp.clickLoginButton();
         lp.driverWait(30);
-        Assert.assertEquals("Александр Евгеньевич Кабанов", lp.getFloatBoxTitle());
+        Assert.assertEquals(GeneralReference.MAIN_PAGE, lp.getCurrentUr1());
+    }
+
+    @Test
+    public void search() {
+        cp.goToCandidatesPage();
+        cp.searchInput("Максим");
+    }
+
+    @Test
+    public void filterTest() throws Exception {
+        cp.goToCandidatesPage();
+        cp.driverWait(30);
+        cp.clickStatusNew();
+        cp.driverWait(20);
+        cp.clickStatusOnApprovalForTheVacancy();
+        cp.driverWait(20);
+        cp.clickStatusAvailableForApproval();
+        cp.driverWait(20);
+        cp.clickStatusHired();
+        cp.driverWait(30);
+        cp.clickChoiceVacancy();
+        cp.driverWait(30);
+        cp.clickVacancyDesigner();
+        cp.driverWait(30);
+        cp.clickRelocationUnavailable();
+        cp.driverWait(30);
+        cp.clickEducationList();
+        cp.driverWait(30);
+        cp.clickHigherEducation();
+        cp.driverWait(30);
+        cp.clickUnivercitiesList();
+        cp.driverWait(30);
+        cp.clickBSU();
+        cp.driverWait(30);
+        cp.clickCompetenceList();
+        cp.driverWait(30);
+        cp.clickMCAccess();
+        cp.driverWait(30);
+    }
+
+    @Test
+    public void isCandidatesPageTest() throws Exception {
+        cp.goToCandidatesPage();
+        cp.driverWait(20);
+        Assert.assertEquals(GeneralReference.CANDIDATES_PAGE, cp.getCurrentUr1());
+    }
+
+    @After
+    public void closeTest() {
+        WebDriverSingleton.destroyInstance();
     }
 }

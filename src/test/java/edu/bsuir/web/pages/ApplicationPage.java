@@ -1,6 +1,7 @@
 package edu.bsuir.web.pages;
 
 import edu.bsuir.driver.WebDriverSingleton;
+import edu.bsuir.element.Element;
 import edu.bsuir.web.Locators.ApplicationElemets;
 import edu.bsuir.web.Locators.LoginElements;
 import org.openqa.selenium.WebDriver;
@@ -12,10 +13,11 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationPage extends GeneralReferencePages {
     WebDriver driver = WebDriverSingleton.getInstance();
+
     public void enterPosition(String position){
-        WebElement element = driver.findElement(ApplicationElemets.POSITION);
-        element.clear();
-        element.sendKeys(position);
+        WebElement element1 = driver.findElement(ApplicationElemets.POSITION);
+        element1.clear();
+        element1.sendKeys(position);
     }
 
     public void enterPlannedClosingDate (String plannedClosingDate){
