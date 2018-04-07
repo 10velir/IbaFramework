@@ -165,7 +165,7 @@ public class CandidatesPage {
         element.click();
     }
 
-    public void cklickCreateProfileButton(){
+    public void clickCreateProfileButton(){
         Element element = new Element("createProfileButton",CandidatesPageElements.CREATE_PROFILE_BUTTON);
         element.clickElement();
     }

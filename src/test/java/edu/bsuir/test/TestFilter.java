@@ -14,7 +14,7 @@ public class TestFilter {
     LoginPage lp = new LoginPage();
 
     @Before
-    public void loginTestForFilter() throws Exception {
+    public void login() throws Exception {
         lp.goToMainPage();
         lp.typeLogin("kabanov@tc.by");
         lp.typePassword("welcome");
@@ -33,6 +33,7 @@ public class TestFilter {
     public void filterTest() throws Exception {
         cp.goToCandidatesPage();
         cp.driverWait(30);
+        cp.setExperience("36");
         cp.clickStatusNew();
         cp.driverWait(20);
         cp.clickStatusOnApprovalForTheVacancy();
@@ -66,6 +67,12 @@ public class TestFilter {
         cp.goToCandidatesPage();
         cp.driverWait(20);
         Assert.assertEquals(GeneralReference.CANDIDATES_PAGE, cp.getCurrentUr1());
+    }
+
+    @Test
+    public void clickCreateProfileBtn() {
+        cp.clickCreateProfileButton();
+        Assert.assertEquals(GeneralReference.CREATE_PROFILE_CANDIDATE,cp.getCurrentUr1());
     }
 
     @After

@@ -15,7 +15,7 @@ public class CandidatesPageElements implements GeneralReference{
     public static final By RELOCATION_UNAVAILABLE = By.xpath("//*[@id = 'relocation_Unavailable']");
 
     public static final By EDUCATION_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1523040756855_3916']");
-    public static final By SEARCH_INPUT = By.xpath("//*[@id = 'searchInput']");
+    public static final By SEARCH_INPUT = By.xpath("//*[@class='form-control']");
     public static final By EDUCATION_NOT_INDICATED = By.xpath("//*[@id = 'education_filtermultiselect-0']");
     public static final By GENERAL_SECONDARY_EDUCATION = By.xpath("//*[@id = 'education_filtermultiselect-1']");
     public static final By PROFESSIONAL_TECHNICAL = By.xpath("//*[@id = 'education_filtermultiselect-2']");
@@ -32,7 +32,5 @@ public class CandidatesPageElements implements GeneralReference{
     public static final By ENGLISH = By.xpath("//*[@id = 'competencies_filtermultiselect-1']");
     public static final By CLEAR_FILTER = By.xpath("//*[@id = 'filter-clear-link']");
     public static final By CREATE_PROFILE_BUTTON = By.xpath("//*[@id = 'createProfileButton']");
-
-
 
 }
