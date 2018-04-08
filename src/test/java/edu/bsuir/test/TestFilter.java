@@ -72,7 +72,7 @@ public class TestFilter {
     @Test
     public void clickCreateProfileBtn() {
         cp.clickCreateProfileButton();
-        Assert.assertEquals(GeneralReference.CREATE_PROFILE_CANDIDATE,cp.getCurrentUr1());
+        Assert.assertEquals(GeneralReference.CREATE_RESUME_PAGE,cp.getCurrentUr1());
     }
 
     @After

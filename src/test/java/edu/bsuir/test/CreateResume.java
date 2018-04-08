@@ -21,13 +21,13 @@ public class CreateResume {
         lp.typeLogin("kabanov@tc.by");
         lp.typePassword("welcome");
         lp.clickLoginButton();
-        lp.driverWait(30);
+        lp.driverWait(40);
         Assert.assertEquals(GeneralReference.MAIN_PAGE, lp.getCurrentUr1());
     }
 
     @Test
     public void createResumeTest() {
-       cr.goToCreateResumePage();
+        cr.goToCreateResumePage();
        //тут должно быть поменять изображение, но это я хз как
         cr.setSurname("Сизов");
         cr.setName("Родион");
@@ -91,7 +91,6 @@ public class CreateResume {
         cr.setRecCompany("Комплекс Бресткая Крепость");
         cr.setRecTelephone("80297260238");
         //можно удалить информацию (метод есть в локаторах)
-
         //добавь ещё загрузить, сохранить и отмена
     }
 }

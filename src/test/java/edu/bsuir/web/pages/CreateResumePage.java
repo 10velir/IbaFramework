@@ -7,6 +7,7 @@ import edu.bsuir.web.Locators.CreateResumeElements;
 import edu.bsuir.web.Locators.GeneralReference;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
@@ -15,7 +16,6 @@ public class CreateResumePage {
     WebDriver driver = WebDriverSingleton.getInstance();
 
     public void goToCreateResumePage() {
-
         driver.get(GeneralReference.CREATE_RESUME_PAGE);
     }
 
@@ -129,7 +129,25 @@ public class CreateResumePage {
         element.click();
     }
 
-    //компетенций там хуева туча, мб потом добавим
+    public void clickSYBD(){
+        WebElement element = driver.findElement(CreateResumeElements.SYBD);
+        element.click();
+    }
+
+    public void clickSQL(){
+       Element element = new Element("SQL", CreateResumeElements.SQL);
+       element.doubleClick();
+    }
+
+    public void clickBaseWeb(){
+        WebElement element = driver.findElement(CreateResumeElements.BASE_WEB);
+        element.click();
+    }
+
+    public void clickJSON(){
+        Element element = new Element("JSON", CreateResumeElements.JSON);
+        element.doubleClick();
+    }
 
     public void clickTabEducation(){
         WebElement element = driver.findElement(CreateResumeElements.TAB_EDUCATION);

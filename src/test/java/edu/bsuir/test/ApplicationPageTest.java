@@ -1,5 +1,6 @@
 package edu.bsuir.test;
 
+import edu.bsuir.web.Locators.GeneralReference;
 import edu.bsuir.web.pages.ApplicationPage;
 import edu.bsuir.web.pages.LoginPage;
 import org.junit.Assert;
@@ -16,7 +17,7 @@ public class ApplicationPageTest {
         lp.typePassword("welcome");
         lp.clickLoginButton();
         lp.driverWait(30);
-        Assert.assertEquals("Александр Евгеньевич Кабанов",lp.getFloatBoxTitle());
+        Assert.assertEquals(GeneralReference.MAIN_PAGE, lp.getCurrentUr1());
     }
     @Test
     public void createApplication() {
