@@ -27,8 +27,7 @@ public class ApplicationPage extends GeneralReferencePages {
     }
 
     public void clickPriorityRadioBtn(){
-        WebElement element = driver.findElement(ApplicationElemets.PRIORITY_RADIO_BTN);
-        element.click();
+        driver.findElement(ApplicationElemets.PRIORITY_RADIO_BTN).click();
     }
 
     public void enterQuantity(String quantity){
@@ -44,8 +43,7 @@ public class ApplicationPage extends GeneralReferencePages {
     }
 
     public void clickType(){
-        WebElement element = driver.findElement(ApplicationElemets.TYPE);
-        element.click();
+        driver.findElement(ApplicationElemets.TYPE).click();
     }
 
     public void enterSalary(String salary){
@@ -85,8 +83,7 @@ public class ApplicationPage extends GeneralReferencePages {
     }
 
     public void clickCandidateType(){
-        WebElement element = driver.findElement(ApplicationElemets.CANDIDATE_TYPE);
-        element.click();
+        driver.findElement(ApplicationElemets.CANDIDATE_TYPE).click();
     }
 
     public void enterEducationSpecialization(String educationSpecialization){
@@ -114,8 +111,7 @@ public class ApplicationPage extends GeneralReferencePages {
     }
 
     public void clickSaveBtn(){
-        WebElement element = driver.findElement(ApplicationElemets.SAVE_BTN);
-        element.click();
+        driver.findElement(ApplicationElemets.SAVE_BTN).click();
     }
 
 
@@ -139,24 +135,19 @@ public class ApplicationPage extends GeneralReferencePages {
         select.selectByValue(education);
     }
     public void editApplication() {
-        WebElement element = driver.findElement(ApplicationElemets.EDIT_APPLICATION);
-        element.click();
+        driver.findElement(ApplicationElemets.EDIT_APPLICATION).click();
     }
     public void clickToAprovalButton() {
-        WebElement element = driver.findElement(ApplicationElemets.SEND_TO_APPROVAL_BUTTON);
-        element.click();
+        driver.findElement(ApplicationElemets.SEND_TO_APPROVAL_BUTTON).click();
     }
     public void selectAllSkills() {
-        WebElement element = driver.findElement(ApplicationElemets.SELECT_SKILLS);
-        element.click();
+        driver.findElement(ApplicationElemets.SELECT_SKILLS).click();
     }
     public void selectBaseSkills() {
-        WebElement element = driver.findElement(ApplicationElemets.SELECT_BASE_SKILLS);
-        element.click();
+        driver.findElement(ApplicationElemets.SELECT_BASE_SKILLS).click();
     }
     public void clickConfirmButon() {
-        WebElement element = driver.findElement(ApplicationElemets.CONFIRM_BUTTON);
-        element.click();
+        driver.findElement(ApplicationElemets.CONFIRM_BUTTON).click();
     }
     public void chooseStressResistance() {
         WebElement element = driver.findElement(ApplicationElemets.STRESS_RESISTANCE);
@@ -171,8 +162,7 @@ public class ApplicationPage extends GeneralReferencePages {
         action.perform();
     }
     public void selectBaseWebSkills(){
-        WebElement element = driver.findElement(ApplicationElemets.BASE_WEB);
-        element.click();
+        driver.findElement(ApplicationElemets.BASE_WEB).click();
     }
     public void chooseJS() {
         WebElement element = driver.findElement(ApplicationElemets.JS);

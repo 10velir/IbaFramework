@@ -2,7 +2,13 @@ package edu.bsuir.web.Locators;
 
 import org.openqa.selenium.By;
 
+import java.util.Formatter;
+
 public class CreateResumeElements {
+
+    public static Formatter xpathForName = new Formatter();
+
+
     public static final By SURNAME = By.xpath("//*[@id = 'surname']");
     public static final By NAME = By.xpath("//*[@id = 'name']");
     public static final By SECOND_NAME = By.xpath("//*[@id = 'secondName']");
@@ -21,6 +27,8 @@ public class CreateResumeElements {
     public static final By DATE_OF_BIRTH_YEAR = By.xpath("//*[@id = 'dateOfBirthYear']");
     public static final By EDUCATION = By.xpath("//select[@id = 'education']");
     public static final By DESIRED_POSITION = By.xpath("//*[@id = 'desiredPosition']");
+
+    public static final By Q = By.xpath("//*[@contains(text(),'Иван')]");
 
     public static final By EDIT_COMPETENCIES_BTN = By.xpath("//*[@id = 'editCompetence']");
     public static final By SYBD = By.xpath("//span[text() = 'СУБД и средства работы с СУБД']");

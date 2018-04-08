@@ -21,4 +21,8 @@ public class GeneralReferencePages {
     public String getCurrentUr1() {
         return driver.getCurrentUrl();
     }
+    public void addShutdownHook() {
+        Runtime.getRuntime().addShutdownHook(
+                new Thread(() -> {driver.quit();driver = null;}));
+    }
 }

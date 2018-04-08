@@ -14,15 +14,18 @@ public class CandidatesPageElements implements GeneralReference{
     public static final By RELOCATION_AVAILABLE = By.xpath("//*[@id = 'relocation_Available']");
     public static final By RELOCATION_UNAVAILABLE = By.xpath("//*[@id = 'relocation_Unavailable']");
 
-    public static final By EDUCATION_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1523040756855_3916']");
+
+    public static final By DROP_DOWN_MENU = By.xpath("//*[@title = 'Выбрать']");
+
+    public static final By EDUCATION_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1523186762430_4154'] ");
     public static final By SEARCH_INPUT = By.xpath("//*[@class='form-control']");
     public static final By EDUCATION_NOT_INDICATED = By.xpath("//*[@id = 'education_filtermultiselect-0']");
     public static final By GENERAL_SECONDARY_EDUCATION = By.xpath("//*[@id = 'education_filtermultiselect-1']");
     public static final By PROFESSIONAL_TECHNICAL = By.xpath("//*[@id = 'education_filtermultiselect-2']");
     public static final By SECONDARY_SPECIAL_EDUCATION = By.xpath("//*[@id = 'education_filtermultiselect-3']");
     public static final By HIGHER_EDUCATION = By.xpath("//*[@id = 'education_filtermultiselect-4']");
-    public static final By NONGRADUATED_HIGHER_EDUCATION = By.xpath("//*[@id = 'education_filtermultiselect-5']");
-    public static final By UNIVERCITIES_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1523040756855_3941']");
+    public static final By NONGRADUATED_HIGHER_EDUCATION = By.xpath("//[@class = 'multiselect-container dropdown-menu']");
+    public static final By UNIVERCITIES_LIST = By.xpath("//*[@id = 'yui_patched_v3_11_0_3_1523186762430_4171'] ");
     public static final By BSU = By.xpath("//*[@id = 'universities_filtermultiselect-0']");
     public static final By BSUIR = By.xpath("//*[@id = 'universities_filtermultiselect-1']");
     public static final By BSEU = By.xpath("//*[@id = 'universities_filtermultiselect-2']");

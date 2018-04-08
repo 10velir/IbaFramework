@@ -19,7 +19,7 @@ public class CreateResumePage {
         driver.get(GeneralReference.CREATE_RESUME_PAGE);
     }
 
-    //поменять изображение
+
 
     public void setSurname(String surname){
         WebElement element = driver.findElement(CreateResumeElements.SURNAME);
@@ -46,13 +46,12 @@ public class CreateResumePage {
     }
 
     public void clickAddTelephoneButton(){
-        WebElement element = driver.findElement(CreateResumeElements.ADD_TELEPHONE_BUTTON);
-        element.click();
+        driver.findElement(CreateResumeElements.ADD_TELEPHONE_BUTTON).click();
+
     }
 
     public void clickRemoveTelephoneButton(){
-        WebElement element = driver.findElement(CreateResumeElements.REMOVE_TELEPHONE_BUTTON);
-        element.click();
+        driver.findElement(CreateResumeElements.REMOVE_TELEPHONE_BUTTON).click();
     }
 
     public void setPrimaryEmail(String primaryEmail){
@@ -62,13 +61,11 @@ public class CreateResumePage {
     }
 
     public void clickAddEmailButton(){
-        WebElement element = driver.findElement(CreateResumeElements.ADD_EMAIL_BUTTON);
-        element.click();
+        driver.findElement(CreateResumeElements.ADD_EMAIL_BUTTON).click();
     }
 
     public void clickRemoveEmailButton(){
-        WebElement element = driver.findElement(CreateResumeElements.REMOVE_EMAIL_BUTTON);
-        element.click();
+       driver.findElement(CreateResumeElements.REMOVE_EMAIL_BUTTON).click();
     }
 
     public void setSkype(String skype){
@@ -90,8 +87,8 @@ public class CreateResumePage {
     }
 
     public void clickRelocation(){
-        WebElement element = driver.findElement(CreateResumeElements.RELOCATION);
-        element.click();
+        driver.findElement(CreateResumeElements.RELOCATION).click();
+
     }
 
     public void setDateOfBirthDay(String dateOfBirthDay){
@@ -125,38 +122,31 @@ public class CreateResumePage {
     }
 
     public void clickEditCompetenciesBtn(){
-        WebElement element = driver.findElement(CreateResumeElements.EDIT_COMPETENCIES_BTN);
-        element.click();
+        driver.findElement(CreateResumeElements.EDIT_COMPETENCIES_BTN).click();
     }
 
     public void clickSYBD(){
-        WebElement element = driver.findElement(CreateResumeElements.SYBD);
-        element.click();
+        driver.findElement(CreateResumeElements.SYBD).click();
     }
 
     public void clickSQL(){
-       Element element = new Element("SQL", CreateResumeElements.SQL);
-       element.doubleClick();
+       new Element("SQL", CreateResumeElements.SQL).doubleClick();
     }
 
-    public void clickBaseWeb(){
-        WebElement element = driver.findElement(CreateResumeElements.BASE_WEB);
-        element.click();
+    public void clickBaseWeb() {
+        driver.findElement(CreateResumeElements.BASE_WEB).click();
     }
 
     public void clickJSON(){
-        Element element = new Element("JSON", CreateResumeElements.JSON);
-        element.doubleClick();
+        new Element("JSON", CreateResumeElements.JSON).doubleClick();
     }
 
     public void clickTabEducation(){
-        WebElement element = driver.findElement(CreateResumeElements.TAB_EDUCATION);
-        element.click();
+        driver.findElement(CreateResumeElements.TAB_EDUCATION).click();
     }
 
     public void clickAddInformation1(){
-        WebElement element = driver.findElement(CreateResumeElements.ADD_INFORMATION_1);
-        element.click();
+        driver.findElement(CreateResumeElements.ADD_INFORMATION_1).click();
     }
 
     public void setUniversity(String university){
@@ -190,18 +180,16 @@ public class CreateResumePage {
     }
 
     public void clickDeleteInformation1(){
-        WebElement element = driver.findElement(CreateResumeElements.DELETE_INFORMATION_1);
-        element.click();
+        driver.findElement(CreateResumeElements.DELETE_INFORMATION_1).click();
     }
 
     public void clickTabWorkExperience(){
-        WebElement element = driver.findElement(CreateResumeElements.TAB_WORK_EXPERIENCE);
-        element.click();
+        driver.findElement(CreateResumeElements.TAB_WORK_EXPERIENCE).click();
     }
 
     public void clickAddInformation2(){
-        WebElement element = driver.findElement(CreateResumeElements.ADD_INFORMATION_2);
-        element.click();
+        driver.findElement(CreateResumeElements.ADD_INFORMATION_2).click();
+
     }
 
     public void setPosition(String position){
@@ -229,8 +217,7 @@ public class CreateResumePage {
     }
 
     public void clickWorkTillNow(){
-        WebElement element = driver.findElement(CreateResumeElements.WORK_TILL_NOW);
-        element.click();
+        driver.findElement(CreateResumeElements.WORK_TILL_NOW).click();
     }
 
     public void setEndWorkMonth(String num) {
@@ -252,13 +239,11 @@ public class CreateResumePage {
     }
 
     public void clickDeleteInformation2(){
-        WebElement element = driver.findElement(CreateResumeElements.DELETE_INFORMATION_2);
-        element.click();
+        driver.findElement(CreateResumeElements.DELETE_INFORMATION_2).click();
     }
 
     public void clickTabMotivation(){
-        WebElement element = driver.findElement(CreateResumeElements.TAB_MOTIVATION);
-        element.click();
+        driver.findElement(CreateResumeElements.TAB_MOTIVATION).click();
     }
 
     public void setMaterialInterest(String num) {
@@ -334,13 +319,11 @@ public class CreateResumePage {
     }
 
     public void clickTabReferences(){
-        WebElement element = driver.findElement(CreateResumeElements.TAB_REFERENCES);
-        element.click();
+        driver.findElement(CreateResumeElements.TAB_REFERENCES).click();
     }
 
     public void clickAddInformation3(){
-        WebElement element = driver.findElement(CreateResumeElements.ADD_INFORMATION_3);
-        element.click();
+        driver.findElement(CreateResumeElements.ADD_INFORMATION_3).click();
     }
 
     public void setRecName(String recName){
@@ -368,7 +351,6 @@ public class CreateResumePage {
     }
 
     public void clickDeleteInformation3(){
-        WebElement element = driver.findElement(CreateResumeElements.DELETE_INFORMATION_3);
-        element.click();
+        driver.findElement(CreateResumeElements.DELETE_INFORMATION_3).click();
     }
 }
