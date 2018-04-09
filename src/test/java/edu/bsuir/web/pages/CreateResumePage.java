@@ -2,108 +2,109 @@ package edu.bsuir.web.pages;
 
 import edu.bsuir.driver.WebDriverSingleton;
 import edu.bsuir.element.Element;
-import edu.bsuir.web.Locators.CandidatesPageElements;
 import edu.bsuir.web.Locators.CreateResumeElements;
 import edu.bsuir.web.Locators.GeneralReference;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.Select;
-
-import java.util.concurrent.TimeUnit;
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import org.sikuli.script.Pattern;
+import org.sikuli.script.Screen;
 
 public class CreateResumePage {
     WebDriver driver = WebDriverSingleton.getInstance();
-
+    private Screen screen;
     public void goToCreateResumePage() {
         driver.get(GeneralReference.CREATE_RESUME_PAGE);
     }
 
-
-
-    public void setSurname(String surname){
+    public void setSurname(String surname) {
         WebElement element = driver.findElement(CreateResumeElements.SURNAME);
         element.clear();
         element.sendKeys(surname);
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         WebElement element = driver.findElement(CreateResumeElements.NAME);
         element.clear();
         element.sendKeys(name);
     }
 
-    public void setSecondName(String secondName){
+    public void setSecondName(String secondName) {
         WebElement element = driver.findElement(CreateResumeElements.SECOND_NAME);
         element.clear();
         element.sendKeys(secondName);
     }
 
-    public void setPrimaryTelephone(String primaryTelephone){
+    public void setPrimaryTelephone(String primaryTelephone) {
         WebElement element = driver.findElement(CreateResumeElements.PRIMARY_TELEPHONE);
         element.clear();
         element.sendKeys(primaryTelephone);
     }
 
-    public void clickAddTelephoneButton(){
+    public void clickAddTelephoneButton() {
         driver.findElement(CreateResumeElements.ADD_TELEPHONE_BUTTON).click();
 
     }
 
-    public void clickRemoveTelephoneButton(){
+    public void clickRemoveTelephoneButton() {
         driver.findElement(CreateResumeElements.REMOVE_TELEPHONE_BUTTON).click();
     }
 
-    public void setPrimaryEmail(String primaryEmail){
+    public void setPrimaryEmail(String primaryEmail) {
         WebElement element = driver.findElement(CreateResumeElements.PRIMARY_EMAIL);
         element.clear();
         element.sendKeys(primaryEmail);
     }
 
-    public void clickAddEmailButton(){
+    public void clickAddEmailButton() {
         driver.findElement(CreateResumeElements.ADD_EMAIL_BUTTON).click();
     }
 
-    public void clickRemoveEmailButton(){
-       driver.findElement(CreateResumeElements.REMOVE_EMAIL_BUTTON).click();
+    public void clickRemoveEmailButton() {
+        driver.findElement(CreateResumeElements.REMOVE_EMAIL_BUTTON).click();
     }
 
-    public void setSkype(String skype){
+    public void setSkype(String skype) {
         WebElement element = driver.findElement(CreateResumeElements.SKYPE);
         element.clear();
         element.sendKeys(skype);
     }
 
-    public void setCountry(String country){
+    public void setCountry(String country) {
         WebElement element = driver.findElement(CreateResumeElements.COUNTRY);
         element.clear();
         element.sendKeys(country);
     }
 
-    public void setAddress(String address){
+    public void setAddress(String address) {
         WebElement element = driver.findElement(CreateResumeElements.CITY);
         element.clear();
         element.sendKeys(address);
     }
 
-    public void clickRelocation(){
+    public void clickRelocation() {
         driver.findElement(CreateResumeElements.RELOCATION).click();
 
     }
 
-    public void setDateOfBirthDay(String dateOfBirthDay){
+    public void setDateOfBirthDay(String dateOfBirthDay) {
         WebElement element = driver.findElement(CreateResumeElements.DATE_OF_BIRTH_DAY);
         element.clear();
         element.sendKeys(dateOfBirthDay);
     }
 
-    public void setDateOfBirthMonth(String dateOfBirthMonth){
+    public void setDateOfBirthMonth(String dateOfBirthMonth) {
         WebElement element = driver.findElement(CreateResumeElements.DATE_OF_BIRTH_MONTH);
         element.clear();
         element.sendKeys(dateOfBirthMonth);
     }
 
-    public void setDateOfBirthYear(String dateOfBirthYear){
+    public void setDateOfBirthYear(String dateOfBirthYear) {
         WebElement element = driver.findElement(CreateResumeElements.DATE_OF_BIRTH_YEAR);
         element.clear();
         element.sendKeys(dateOfBirthYear);
@@ -115,53 +116,53 @@ public class CreateResumePage {
         select.selectByValue(num);
     }
 
-    public void setDesiredPosition(String desiredPosition){
+    public void setDesiredPosition(String desiredPosition) {
         WebElement element = driver.findElement(CreateResumeElements.DESIRED_POSITION);
         element.clear();
         element.sendKeys(desiredPosition);
     }
 
-    public void clickEditCompetenciesBtn(){
+    public void clickEditCompetenciesBtn() {
         driver.findElement(CreateResumeElements.EDIT_COMPETENCIES_BTN).click();
     }
 
-    public void clickSYBD(){
+    public void clickSYBD() {
         driver.findElement(CreateResumeElements.SYBD).click();
     }
 
-    public void clickSQL(){
-       new Element("SQL", CreateResumeElements.SQL).doubleClick();
+    public void clickSQL() {
+        new Element("SQL", CreateResumeElements.SQL).doubleClick();
     }
 
     public void clickBaseWeb() {
         driver.findElement(CreateResumeElements.BASE_WEB).click();
     }
 
-    public void clickJSON(){
+    public void clickJSON() {
         new Element("JSON", CreateResumeElements.JSON).doubleClick();
     }
 
-    public void clickTabEducation(){
+    public void clickTabEducation() {
         driver.findElement(CreateResumeElements.TAB_EDUCATION).click();
     }
 
-    public void clickAddInformation1(){
+    public void clickAddInformation1() {
         driver.findElement(CreateResumeElements.ADD_INFORMATION_1).click();
     }
 
-    public void setUniversity(String university){
+    public void setUniversity(String university) {
         WebElement element = driver.findElement(CreateResumeElements.UNIVERSITY);
         element.clear();
         element.sendKeys(university);
     }
 
-    public void setFaculty(String faculty){
+    public void setFaculty(String faculty) {
         WebElement element = driver.findElement(CreateResumeElements.FACULTY);
         element.clear();
         element.sendKeys(faculty);
     }
 
-    public void setSpecialization(String specialization){
+    public void setSpecialization(String specialization) {
         WebElement element = driver.findElement(CreateResumeElements.SPECIALIZATION);
         element.clear();
         element.sendKeys(specialization);
@@ -179,26 +180,26 @@ public class CreateResumePage {
         select.selectByValue(num);
     }
 
-    public void clickDeleteInformation1(){
+    public void clickDeleteInformation1() {
         driver.findElement(CreateResumeElements.DELETE_INFORMATION_1).click();
     }
 
-    public void clickTabWorkExperience(){
+    public void clickTabWorkExperience() {
         driver.findElement(CreateResumeElements.TAB_WORK_EXPERIENCE).click();
     }
 
-    public void clickAddInformation2(){
+    public void clickAddInformation2() {
         driver.findElement(CreateResumeElements.ADD_INFORMATION_2).click();
 
     }
 
-    public void setPosition(String position){
+    public void setPosition(String position) {
         WebElement element = driver.findElement(CreateResumeElements.POSITION);
         element.clear();
         element.sendKeys(position);
     }
 
-    public void setCompany(String company){
+    public void setCompany(String company) {
         WebElement element = driver.findElement(CreateResumeElements.COMPANY);
         element.clear();
         element.sendKeys(company);
@@ -216,7 +217,7 @@ public class CreateResumePage {
         select.selectByValue(num);
     }
 
-    public void clickWorkTillNow(){
+    public void clickWorkTillNow() {
         driver.findElement(CreateResumeElements.WORK_TILL_NOW).click();
     }
 
@@ -232,17 +233,17 @@ public class CreateResumePage {
         select.selectByValue(num);
     }
 
-    public void setDescription(String description){
+    public void setDescription(String description) {
         WebElement element = driver.findElement(CreateResumeElements.DESCRIPTION);
         element.clear();
         element.sendKeys(description);
     }
 
-    public void clickDeleteInformation2(){
+    public void clickDeleteInformation2() {
         driver.findElement(CreateResumeElements.DELETE_INFORMATION_2).click();
     }
 
-    public void clickTabMotivation(){
+    public void clickTabMotivation() {
         driver.findElement(CreateResumeElements.TAB_MOTIVATION).click();
     }
 
@@ -318,39 +319,110 @@ public class CreateResumePage {
         select.selectByValue(num);
     }
 
-    public void clickTabReferences(){
+    public void clickTabReferences() {
         driver.findElement(CreateResumeElements.TAB_REFERENCES).click();
     }
 
-    public void clickAddInformation3(){
+    public void clickAddInformation3() {
         driver.findElement(CreateResumeElements.ADD_INFORMATION_3).click();
     }
 
-    public void setRecName(String recName){
+    public void setRecName(String recName) {
         WebElement element = driver.findElement(CreateResumeElements.REC_NAME);
         element.clear();
         element.sendKeys(recName);
     }
 
-    public void setRecPosition(String recPosition){
+    public void setRecPosition(String recPosition) {
         WebElement element = driver.findElement(CreateResumeElements.REC_POSITION);
         element.clear();
         element.sendKeys(recPosition);
     }
 
-    public void setRecCompany(String recCompany){
+    public void setRecCompany(String recCompany) {
         WebElement element = driver.findElement(CreateResumeElements.REC_COMPANY);
         element.clear();
         element.sendKeys(recCompany);
     }
 
-    public void setRecTelephone(String recTelephone){
+    public void setRecTelephone(String recTelephone) {
         WebElement element = driver.findElement(CreateResumeElements.REC_TELEPHONE);
         element.clear();
         element.sendKeys(recTelephone);
     }
 
-    public void clickDeleteInformation3(){
+    public void sendPathToImage(String path) {
+        driver.findElement(CreateResumeElements.PROFILE_IMAGE).sendKeys(path);
+    }
+
+    public void clickDeleteInformation3() {
         driver.findElement(CreateResumeElements.DELETE_INFORMATION_3).click();
+    }
+
+    public String getAbsolutePath(String file) {
+        Path path = Paths.get(file);
+        return path.toAbsolutePath().toString();
+    }
+
+    public void clickChangeImgLink() {
+        driver.findElement(CreateResumeElements.CHANGE_IMG_LINK).click();
+    }
+
+    public String getPictureAttribute(String attribute) {
+        WebElement element = driver.findElement(CreateResumeElements.CURRENT_IMAGE);
+        return element.getAttribute(attribute).toString();
+    }
+
+    public void sendFile(String path) {
+        sendFileHelper(path);
+    }
+
+    private void sendFileHelper(String path) {
+        try {
+            setClipboardData(path);
+            Robot robot = new Robot();
+            robot.delay(1000);
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.delay(1000);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(1000);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void setClipboardData(String string) {
+        StringSelection stringSelection = new StringSelection(string);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+    }
+
+    public Pattern getFilePath(String path) {
+        Pattern filepath = new Pattern(CreateResumeElements.FILE_PATH);
+        return filepath;
+    }
+
+    public Pattern getOpenButton(String path) {
+        Pattern filepath = new Pattern(CreateResumeElements.OPEN_BUTTON);
+        return filepath;
+    }
+    public Screen getScreen() {
+        screen = new Screen();
+        return screen;
+    }
+
+    public void screenWaiter(Pattern path, sec) {
+        screen.wait(path, sec);
+    }
+
+    public void screenType(Pattern path, String absPath ) {
+        screen.type(path, absPath);
+    }
+
+    public void screenClick(Pattern path) {
+        screen.click(path);
     }
 }

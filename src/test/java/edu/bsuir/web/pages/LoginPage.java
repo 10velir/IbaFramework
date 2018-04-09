@@ -13,16 +13,18 @@ public class LoginPage extends GeneralReferencePages{
     public void driverWait(int sec) {
         driver.manage().timeouts().pageLoadTimeout(sec, TimeUnit.SECONDS);
     }
-    public void typeLogin(String login){
+    public LoginPage typeLogin(String login){
         WebElement element = driver.findElement(LoginElements.LOGIN);
         element.clear();
         element.sendKeys(login);
+        return this;
     }
 
-    public void typePassword(String password){
+    public LoginPage typePassword(String password){
         WebElement element = driver.findElement(LoginElements.PASSWORD);
         element.clear();
         element.sendKeys(password);
+        return this;
     }
 
     public void clickLoginButton(){

@@ -54,6 +54,7 @@ public class CandidatesPage {
         driver.findElement(CandidatesPageElements.STATUS_NEW).click();
     }
     public void driverWait(long sec) {
+
         driver.manage().timeouts().pageLoadTimeout(sec, TimeUnit.SECONDS);
     }
     public void clickStatusOnApprovalForTheVacancy(){

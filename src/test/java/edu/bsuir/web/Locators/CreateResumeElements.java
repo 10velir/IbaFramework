@@ -8,7 +8,6 @@ public class CreateResumeElements {
 
     public static Formatter xpathForName = new Formatter();
 
-
     public static final By SURNAME = By.xpath("//*[@id = 'surname']");
     public static final By NAME = By.xpath("//*[@id = 'name']");
     public static final By SECOND_NAME = By.xpath("//*[@id = 'secondName']");
@@ -28,7 +27,7 @@ public class CreateResumeElements {
     public static final By EDUCATION = By.xpath("//select[@id = 'education']");
     public static final By DESIRED_POSITION = By.xpath("//*[@id = 'desiredPosition']");
 
-    public static final By Q = By.xpath("//*[@contains(text(),'Иван')]");
+    public static final By DYNAMIC_XPATH_TO_CANDIDATE_BY_NAME = By.xpath("//*[@contains(text(),'Иван')]");
 
     public static final By EDIT_COMPETENCIES_BTN = By.xpath("//*[@id = 'editCompetence']");
     public static final By SYBD = By.xpath("//span[text() = 'СУБД и средства работы с СУБД']");
@@ -78,4 +77,13 @@ public class CreateResumeElements {
     public static final By REC_COMPANY = By.xpath("//*[@id = 'recCompany']");
     public static final By REC_TELEPHONE = By.xpath("//*[@id = 'recTelephone']");
     public static final By DELETE_INFORMATION_3 = By.xpath("//*[@id = 'yui_patched_v3_11_0_1_1523100819094_3146']");
+
+    public static final String noAvatar = "http://testing.cld.iba.by/TC-RecruitingAndOnboarding-portlet/common/css/images/no-avatar.jpg";
+    public static final By PROFILE_IMAGE = By.xpath("//input[@id='profileImage']");
+    public static final By CURRENT_IMAGE = By.id("currentImage");
+    public static final By CHANGE_IMG_LINK = By.id("changeImgLink");
+    public static final String PATH_TO_IMAGE = "resources/human.png";
+    public static final String FILE_PATH = "resources/sikuli/FilePath.JPG";
+    public static final String OPEN_BUTTON = "resources/sikuli/OpenButton.JPG";
+
 }

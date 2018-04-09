@@ -6,23 +6,32 @@ import org.openqa.selenium.WebDriver;
 
 public class GeneralReferencePages {
     WebDriver driver = WebDriverSingleton.getInstance();
-    public void goToMainPage(){
+
+    public void goToMainPage() {
         driver.get(GeneralReference.MAIN_PAGE);
     }
-    public void goToApplicationCreationPage(){
+
+    public void goToApplicationCreationPage() {
         driver.get(GeneralReference.APPLICATION_CREATION_PAGE);
     }
-    public void goToRecruitingPage(){
+
+    public void goToRecruitingPage() {
         driver.get(GeneralReference.RECRUITING_PAGE);
     }
+
     public void goToCandidatesPage() {
         driver.get(GeneralReference.CANDIDATES_PAGE);
     }
+
     public String getCurrentUr1() {
         return driver.getCurrentUrl();
     }
+
     public void addShutdownHook() {
         Runtime.getRuntime().addShutdownHook(
-                new Thread(() -> {driver.quit();driver = null;}));
+                new Thread(() -> {
+                    driver.quit();
+                    driver = null;
+                }));
     }
 }

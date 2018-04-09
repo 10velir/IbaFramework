@@ -16,7 +16,7 @@ public class WebDriverSingleton {
             webDriver = new ChromeDriver();
             webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
             webDriver.manage().window().maximize();
-            webDriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+            webDriver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         }
         return webDriver;
     }
