@@ -11,8 +11,8 @@ import org.junit.Test;
 
 
 public class UploadFileUsingSeleniumTest {
-    CreateResumePage crp = new CreateResumePage();
-    LoginPage lp = new LoginPage();
+    private CreateResumePage crp = new CreateResumePage();
+    private LoginPage lp = new LoginPage();
 
     @Test
     public void uploadFileUsingSelenium() {

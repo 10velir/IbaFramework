@@ -4,20 +4,21 @@ import edu.bsuir.driver.WebDriverSingleton;
 import edu.bsuir.element.Element;
 import edu.bsuir.web.Locators.CreateResumeElements;
 import edu.bsuir.web.Locators.GeneralReference;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+/*import org.sikuli.script.Pattern;
+import org.sikuli.script.Screen;*/   //how to import that?
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Screen;
 
 public class CreateResumePage {
     WebDriver driver = WebDriverSingleton.getInstance();
-    private Screen screen;
+    //private Screen screen;
     public void goToCreateResumePage() {
         driver.get(GeneralReference.CREATE_RESUME_PAGE);
     }
@@ -370,26 +371,32 @@ public class CreateResumePage {
 
     public String getPictureAttribute(String attribute) {
         WebElement element = driver.findElement(CreateResumeElements.CURRENT_IMAGE);
-        return element.getAttribute(attribute).toString();
+        return element.getAttribute(attribute);
+    }
+
+    public boolean isElementPresent(By by) {
+        Element element = new Element("",by );
+        return element.isElementPresent()? true : false;
     }
 
     public void sendFile(String path) {
-        sendFileHelper(path);
+        sendFileHelper(getAbsolutePath(path));
     }
 
     private void sendFileHelper(String path) {
         try {
+
             setClipboardData(path);
             Robot robot = new Robot();
-            robot.delay(1000);
+            robot.delay(5000);
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_CONTROL);
-            robot.delay(1000);
+            robot.delay(5000);
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
-            robot.delay(1000);
+            robot.delay(5000);
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -400,7 +407,11 @@ public class CreateResumePage {
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
     }
 
-    public Pattern getFilePath(String path) {
+    public void clickPlusAttachment() {
+        driver.findElement(CreateResumeElements.PLUS_ATTACHMENT).click();
+    }
+
+   /* public Pattern getFilePath(String path) {
         Pattern filepath = new Pattern(CreateResumeElements.FILE_PATH);
         return filepath;
     }
@@ -424,5 +435,5 @@ public class CreateResumePage {
 
     public void screenClick(Pattern path) {
         screen.click(path);
-    }
+    }*/
 }

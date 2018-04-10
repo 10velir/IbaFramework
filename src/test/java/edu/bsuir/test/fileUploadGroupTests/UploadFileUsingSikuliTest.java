@@ -19,6 +19,6 @@ public class UploadFileUsingSikuliTest {
         Helper.waitForTime(20);
 
         crp.clickChangeImgLink();
-        crp.getScreen().wait()
+        //crp.getScreen().wait() :(
     }
 }

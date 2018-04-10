@@ -18,8 +18,10 @@ public class UploadFileUsingRobotTest {
         crp.goToCreateResumePage();
         Helper.waitForTime(10);
 
+        crp.clickPlusAttachment();
+        Helper.waitForTime(10);
         crp.sendFile(CreateResumeElements.PATH_TO_IMAGE);
 
-        Assert.assertEquals(crp.getPictureAttribute("src"),CreateResumeElements.noAvatar);
+        Assert.assertTrue(crp.isElementPresent(CreateResumeElements.REMUVE_ATTACHMENT));
     }
 }

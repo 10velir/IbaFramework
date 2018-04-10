@@ -85,5 +85,7 @@ public class CreateResumeElements {
     public static final String PATH_TO_IMAGE = "resources/human.png";
     public static final String FILE_PATH = "resources/sikuli/FilePath.JPG";
     public static final String OPEN_BUTTON = "resources/sikuli/OpenButton.JPG";
+    public static final By PLUS_ATTACHMENT = By.xpath("//*[@class = 'fa fa-plus add-attachment']");
+    public static final By REMUVE_ATTACHMENT = By.xpath("//*[@class = 'fa fa-remove remove remove-attachment']");
 
 }
