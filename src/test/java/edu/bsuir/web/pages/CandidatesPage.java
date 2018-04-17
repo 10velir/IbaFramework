@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 public class CandidatesPage {
     private WebDriver driver = WebDriverSingleton.getInstance();
-    private WebDriverWait wait = new WebDriverWait(driver,10);
+    private WebDriverWait wait = new WebDriverWait(driver, 10);
     private List<WebElement> elements = null;
 
     public void setExperience(String num) {
@@ -26,7 +26,7 @@ public class CandidatesPage {
     }
 
     public void setXpathForName(String name) {
-        CreateResumeElements.xpathForName.format("//*[contains(text(),'%s ')]",name);
+        CreateResumeElements.xpathForName.format("//*[contains(text(),'%s ')]", name);
     }
 
     public void goToProfileOfCandidate() {
@@ -36,171 +36,188 @@ public class CandidatesPage {
     }
 
     public WebElement getDropDownMenuByNumber(int number) {
-        elements = driver.findElements(CandidatesPageElements.DROP_DOWN_MENU);
-        Iterator<WebElement> itr = elements.iterator();
-        while(itr.hasNext()) {
-            System.out.println(itr.next());
-        }
-        /*if(elements == null) {
-            elements = driver.findElements(CandidatesPageElements.DROP_DOWN_MENU);
-        } else {
+        if (elements != null) {
             return elements.get(number);
-        }*/
-        return null;
+        } else {
+            elements = driver.findElements(CandidatesPageElements.DROP_DOWN_MENU);
+        }
+        return elements.get(number);
     }
 
 
-    public void clickStatusNew(){
+    public void clickStatusNew() {
         driver.findElement(CandidatesPageElements.STATUS_NEW).click();
     }
+
     public void driverWait(long sec) {
 
         driver.manage().timeouts().pageLoadTimeout(sec, TimeUnit.SECONDS);
     }
-    public void clickStatusOnApprovalForTheVacancy(){
+
+    public void clickStatusOnApprovalForTheVacancy() {
         driver.findElement(CandidatesPageElements.STATUS_ON_APPROVAL_FOR_THE_VACANCY).click();
     }
 
-    public void clickStatusAvailableForApproval(){
+    public void clickStatusAvailableForApproval() {
         driver.findElement(CandidatesPageElements.STATUS_AVAILABLE_FOR_APPROVAL).click();
     }
 
-    public void clickStatusHired(){
+    public void clickStatusHired() {
         driver.findElement(CandidatesPageElements.STATUS_HIRED).click();
     }
 
-    public void clickChoiceVacancy(){
+    public void clickChoiceVacancy() {
         try {
-            getDropDownMenuByNumber(1).click();
-        }catch (NullPointerException e) {
+            getDropDownMenuByNumber(0).click();
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
+        //driver.findElement(CandidatesPageElements.CHOICE_VACANCY).click();
     }
 
     public void info() {
-        Set<Cookie> cookies= driver.manage().getCookies();
+        Set<Cookie> cookies = driver.manage().getCookies();
         Iterator<Cookie> itr = cookies.iterator();
-        while(itr.hasNext()) {
+        while (itr.hasNext()) {
             System.out.println(itr.next());
         }
         System.out.println("_______");
-        System.out.println(((HasCapabilities)driver).getCapabilities());
+        System.out.println(((HasCapabilities) driver).getCapabilities());
     }
 
-    public void searchInput(String searchInputWord){
+    public void searchInput(String searchInputWord) {
         WebElement element = driver.findElement(CandidatesPageElements.SEARCH_INPUT);
         element.clear();
         element.sendKeys(searchInputWord);
         setXpathForName(searchInputWord);
     }
 
-    public void clickVacancyDesigner(){
-        driver.findElement(CandidatesPageElements.VACANCY_DESIGNER).click();
+    public void clickAgileDeveloper() {
+        driver.findElement(CandidatesPageElements.AGILE_DEVELOPER).click();
     }
 
-    public void clickRelocationAvailable(){
+    public void closeOpenedButton() {
+        driver.findElement(CandidatesPageElements.CLOSE_OPENED_BUTTON).click();
+    }
+
+    public void clickRelocationAvailable() {
         driver.findElement(CandidatesPageElements.RELOCATION_AVAILABLE).click();
     }
 
-    public void clickRelocationUnavailable(){
+    public void clickRelocationUnavailable() {
         driver.findElement(CandidatesPageElements.RELOCATION_UNAVAILABLE).click();
     }
 
-    public void clickEducationList(){
+    public void clickEducationList() {
         try {
-            WebElement element = getDropDownMenuByNumber(2);
-        }catch (NullPointerException e){
+            getDropDownMenuByNumber(1).click();
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
     }
 
-    public void clickEducationNotIndicated(){
+    public void clickEducationNotIndicated() {
         driver.findElement(CandidatesPageElements.EDUCATION_NOT_INDICATED).click();
 
     }
 
-    public void clickGeneralSecondaryEducation(){
+    public void clickGeneralSecondaryEducation() {
         driver.findElement(CandidatesPageElements.GENERAL_SECONDARY_EDUCATION).click();
     }
 
-    public void clickProfessionalTechnical(){
+    public void clickProfessionalTechnical() {
         driver.findElement(CandidatesPageElements.PROFESSIONAL_TECHNICAL).click();
     }
 
-    public void clickSecondarySpecial(){
+    public void clickSecondarySpecial() {
         driver.findElement(CandidatesPageElements.SECONDARY_SPECIAL_EDUCATION).click();
 
     }
 
-    public void clickHigherEducation(){
+    public void clickHigherEducation() {
         driver.findElement(CandidatesPageElements.HIGHER_EDUCATION).click();
-         //new Element("HIGHER_EDUCATION",CandidatesPageElements.HIGHER_EDUCATION).clickElement();
+        //new Element("HIGHER_EDUCATION",CandidatesPageElements.HIGHER_EDUCATION).clickElement();
 
     }
 
-    public void clickNongraduatedHigherEducation(){
+    public void clickNongraduatedHigherEducation() {
         driver.findElement(CandidatesPageElements.NONGRADUATED_HIGHER_EDUCATION).click();
     }
 
-    public void clickUnivercitiesList(){
-        driver.findElement(CandidatesPageElements.UNIVERCITIES_LIST).click();
+    public void clickUnivercitiesList() {
+        try {
+            getDropDownMenuByNumber(2).click();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         //new Element("UNIVERCITIES_LIST",CandidatesPageElements.UNIVERCITIES_LIST).clickElement();
     }
 
-    public void clickBSU(){
+    public void clickBSU() {
         driver.findElement(CandidatesPageElements.BSU).click();
         //new Element("BSU",CandidatesPageElements.BSU).clickElement();
     }
 
-    public void clickBSUIR(){
+    public void clickBSUIR() {
         driver.findElement(CandidatesPageElements.BSUIR).click();
     }
 
-    public void clickBSEU(){
+    public void clickBSEU() {
         driver.findElement(CandidatesPageElements.BSEU).click();
 
     }
 
-    public void clickBSTU(){
+    public void clickBSTU() {
         driver.findElement(CandidatesPageElements.BSTU).click();
     }
 
-    public void clickCompetenceList(){
-        driver.findElement(CandidatesPageElements.COMPETENCE_LIST).click();
+    public void clickCompetenceList() {
+        try {
+            getDropDownMenuByNumber(3).click();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         //new Element("COMPETENCE_LIST",CandidatesPageElements.COMPETENCE_LIST).clickElement();
     }
 
-    public void clickMCAccess(){
-        driver.findElement(CandidatesPageElements.MC_ACCESS).click();
+    public void clickStrategicThinking() {
+        driver.findElement(CandidatesPageElements.STRATEGIC_THINKING).click();
         //new Element("COMPETENCE_LIST",CandidatesPageElements.MC_ACCESS).clickElement();
     }
 
-    public void clickEnglish(){
+    public void clickEnglish() {
         driver.findElement(CandidatesPageElements.ENGLISH).click();
     }
 
-    public void clickClearFilter(){
+    public void clickClearFilter() {
         driver.findElement(CandidatesPageElements.CLEAR_FILTER).click();
     }
 
-    public void clickCreateProfileButton(){
-        new Element("createProfileButton",CandidatesPageElements.CREATE_PROFILE_BUTTON).clickElement();
+    public void clickCreateProfileButton() {
+        driver.findElement(CandidatesPageElements.CREATE_PROFILE_BUTTON).click();
     }
 
 
-    public void goToMainPage(){
+    public void goToMainPage() {
         driver.get(GeneralReference.MAIN_PAGE);
     }
-    public void goToApplicationCreationPage(){
+
+    public void goToApplicationCreationPage() {
         driver.get(GeneralReference.APPLICATION_CREATION_PAGE);
     }
-    public void goToRecruitingPage(){
+
+    public void goToRecruitingPage() {
         driver.get(GeneralReference.RECRUITING_PAGE);
     }
+
     public void goToCandidatesPage() {
         driver.get(GeneralReference.CANDIDATES_PAGE);
     }
+
     public String getCurrentUr1() {
         return driver.getCurrentUrl();
+    }
+    public void closeDriver() {
+        driver.close();
     }
 }

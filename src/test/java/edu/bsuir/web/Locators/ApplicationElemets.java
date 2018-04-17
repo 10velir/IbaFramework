@@ -28,11 +28,11 @@ public class ApplicationElemets implements GeneralReference {
     public static final By EDIT_APPLICATION = By.xpath("//*[@id = 'editApplicationButton']");
     public static final By SEND_TO_APPROVAL_BUTTON = By.xpath("//div//a[@id = 'sendToApprovalButton']");
     public static final By SELECT_SKILLS = By.xpath("//*[@id = 'editrequiredCompetence']");
-    public static final By SELECT_BASE_SKILLS = By.xpath("//span[text()='Базовые']");
+    public static final By SELECT_BASE_SKILLS = By.xpath("//span[text()='Р‘Р°Р·РѕРІС‹Рµ']");
     public static final By CONFIRM_BUTTON = By.xpath("//button[text() = 'OK']");
-    public static final By TRAINABILITY = By.xpath("//span[text() = 'Обучаемость']");
-    public static final By STRESS_RESISTANCE = By.xpath("//span[text() = 'Стрессоустойчивость']");
-    public static final By BASE_WEB = By.xpath("//span[text() = 'Базовые web технологии']");
+    public static final By TRAINABILITY = By.xpath("//span[text() = 'РћР±СѓС‡Р°РµРјРѕСЃС‚СЊ']");
+    public static final By STRESS_RESISTANCE = By.xpath("//span[text() = 'РЎС‚СЂРµСЃСЃРѕСѓСЃС‚РѕР№С‡РёРІРѕСЃС‚СЊ']");
+    public static final By BASE_WEB = By.xpath("//span[text() = 'Р‘Р°Р·РѕРІС‹Рµ web С‚РµС…РЅРѕР»РѕРіРёРё']");
     public static final By JS = By.xpath("//span[text() = 'JavaScript']");
     public static final By CSS3 = By.xpath("//span[text() = 'CSS3']");
     public static final By HTML = By.xpath("//span[text() = 'HTML']");

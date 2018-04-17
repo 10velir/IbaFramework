@@ -27,12 +27,12 @@ public class CreateResumeElements {
     public static final By EDUCATION = By.xpath("//select[@id = 'education']");
     public static final By DESIRED_POSITION = By.xpath("//*[@id = 'desiredPosition']");
 
-    public static final By DYNAMIC_XPATH_TO_CANDIDATE_BY_NAME = By.xpath("//*[@contains(text(),'Иван')]");
+    public static final By DYNAMIC_XPATH_TO_CANDIDATE_BY_NAME = By.xpath("//*[@contains(text(),'РРІР°РЅ')]");
 
     public static final By EDIT_COMPETENCIES_BTN = By.xpath("//*[@id = 'editCompetence']");
-    public static final By SYBD = By.xpath("//span[text() = 'СУБД и средства работы с СУБД']");
+    public static final By SYBD = By.xpath("//span[text() = 'РЎРЈР‘Р” Рё СЃСЂРµРґСЃС‚РІР° СЂР°Р±РѕС‚С‹ СЃ РЎРЈР‘Р”']");
     public static final By SQL = By.xpath("//span[text() = 'SQL']");
-    public static final By BASE_WEB = By.xpath("//span[text() = 'Базовые web технологии']");
+    public static final By BASE_WEB = By.xpath("//span[text() = 'Р‘Р°Р·РѕРІС‹Рµ web С‚РµС…РЅРѕР»РѕРіРёРё']");
     public static final By JSON = By.xpath("//span[text() = 'JSON']");
 
     public static final By TAB_EDUCATION = By.xpath("//*[@id = 'yui_patched_v3_11_0_4_1523100819094_124']");

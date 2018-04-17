@@ -388,15 +388,16 @@ public class CreateResumePage {
 
             setClipboardData(path);
             Robot robot = new Robot();
-            robot.delay(5000);
+            robot.delay(2000);
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_CONTROL);
-            robot.delay(5000);
+            robot.delay(2000);
             robot.keyPress(KeyEvent.VK_ENTER);
+            robot.delay(2000);
             robot.keyRelease(KeyEvent.VK_ENTER);
-            robot.delay(5000);
+            robot.delay(2000);
         } catch (AWTException e) {
             e.printStackTrace();
         }

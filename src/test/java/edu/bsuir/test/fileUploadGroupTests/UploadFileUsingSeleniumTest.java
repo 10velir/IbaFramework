@@ -25,7 +25,7 @@ public class UploadFileUsingSeleniumTest {
                 crp.getAbsolutePath(CreateResumeElements.PATH_TO_IMAGE)
         );
 
-        Assert.assertEquals(crp.getPictureAttribute("src"), CreateResumeElements.noAvatar);
+        Assert.assertNotEquals(crp.getPictureAttribute("src"), CreateResumeElements.noAvatar);
     }
 
 }

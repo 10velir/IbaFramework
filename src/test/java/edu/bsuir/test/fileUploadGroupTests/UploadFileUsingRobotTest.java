@@ -16,10 +16,10 @@ public class UploadFileUsingRobotTest {
         lp.goToMainPage();
         lp.typePassword("welcome").typeLogin("kabanov@tc.by").clickLoginButton();
         crp.goToCreateResumePage();
-        Helper.waitForTime(10);
+        Helper.waitForTime(3);
 
         crp.clickPlusAttachment();
-        Helper.waitForTime(10);
+        Helper.waitForTime(3);
         crp.sendFile(CreateResumeElements.PATH_TO_IMAGE);
 
         Assert.assertTrue(crp.isElementPresent(CreateResumeElements.REMUVE_ATTACHMENT));
