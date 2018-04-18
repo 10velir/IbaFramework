@@ -49,7 +49,7 @@ public class Helper {
         return buffer.toString();
     }
 
-    public static void closeBrowser() throws IOException {
+    public static void closeBrowser() {
         WebDriverSingleton.getInstance().close();
         WebDriverSingleton.destroyInstance();
     }

@@ -1,6 +1,7 @@
 package edu.bsuir.test;
 
 import edu.bsuir.driver.WebDriverSingleton;
+import edu.bsuir.util.helper.Helper;
 import edu.bsuir.web.Locators.GeneralReference;
 import edu.bsuir.web.pages.CandidatesPage;
 import edu.bsuir.web.pages.CreateResumePage;
@@ -14,6 +15,7 @@ public class CreateResume {
     CreateResumePage cr = new CreateResumePage();
     LoginPage lp = new LoginPage();
     CandidatesPage cp = new CandidatesPage();
+    private Helper hl = new Helper();
 
     @Before
     public void loginTestForFilter() throws Exception {
@@ -48,8 +50,7 @@ public class CreateResume {
         cr.setEducation("4");
         cr.setDesiredPosition("C++ developer");
 
-        cr.clickEditCompetenciesBtn();
-        //компетенций там хуева туча, мб потом добавим
+        //cr.clickEditCompetenciesBtn();
 
         cr.clickTabEducation();
         cr.clickAddInformation1();
@@ -92,6 +93,11 @@ public class CreateResume {
         cr.setRecTelephone("80297260238");
         //можно удалить информацию (метод есть в локаторах)
         //добавь ещё загрузить, сохранить и отмена
+    }
+
+    @After
+    public void closeTest() {
+        hl.closeBrowser();
     }
 }
 

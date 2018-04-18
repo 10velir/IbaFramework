@@ -1,8 +1,11 @@
 package edu.bsuir.test;
 
+import edu.bsuir.driver.WebDriverSingleton;
+import edu.bsuir.util.helper.Helper;
 import edu.bsuir.web.Locators.GeneralReference;
 import edu.bsuir.web.pages.ApplicationPage;
 import edu.bsuir.web.pages.LoginPage;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,6 +13,7 @@ import org.junit.Test;
 public class ApplicationPageTest {
     ApplicationPage ap = new ApplicationPage();
     LoginPage lp = new LoginPage();
+    private Helper hl = new Helper();
     @Before
     public void loginTestForFilter() {
         lp.goToMainPage();
@@ -50,5 +54,10 @@ public class ApplicationPageTest {
         ap.clickConfirmButon();
         ap.enterComment("Good luck & have fun ");
         //ap.clickSaveBtn();
+    }
+
+    @After
+    public void closeTest() {
+        hl.closeBrowser();
     }
 }

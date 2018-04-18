@@ -35,17 +35,17 @@ public class CreateResumeElements {
     public static final By BASE_WEB = By.xpath("//span[text() = 'Р‘Р°Р·РѕРІС‹Рµ web С‚РµС…РЅРѕР»РѕРіРёРё']");
     public static final By JSON = By.xpath("//span[text() = 'JSON']");
 
-    public static final By TAB_EDUCATION = By.xpath("//*[@id = 'yui_patched_v3_11_0_4_1523100819094_124']");
-    public static final By ADD_INFORMATION_1 = By.xpath("//*[@id = 'yui_patched_v3_11_0_1_1523100819094_740']");
+    public static final By TAB_EDUCATION = By.xpath("//*[@href = '#tab-8']");
+    public static final By ADD_INFORMATION_1 = By.xpath("//span[text() = 'Добавить информацию']");
     public static final By UNIVERSITY = By.xpath("//*[@id = 'university']");
     public static final By FACULTY = By.xpath("//*[@id = 'faculty']");
     public static final By SPECIALIZATION = By.xpath("//*[@id = 'specialization']");
     public static final By START_YEAR = By.xpath("//*[@id = 'startYear']");
     public static final By END_YEAR = By.xpath("//*[@id = 'endYear']");
-    public static final By DELETE_INFORMATION_1 = By.xpath("//*[@id = 'yui_patched_v3_11_0_1_1523100819094_886']");
+    public static final By DELETE_INFORMATION_1 = By.xpath("//span[text() = 'Удалить']");
 
-    public static final By TAB_WORK_EXPERIENCE = By.xpath("//*[@id = 'yui_patched_v3_11_0_4_1523100819094_135']");
-    public static final By ADD_INFORMATION_2 = By.xpath("//*[@id = 'yui_patched_v3_11_0_1_1523100819094_1326']");
+    public static final By TAB_WORK_EXPERIENCE = By.xpath("//*[@href = '#tab-2']");
+    public static final By ADD_INFORMATION_2 = By.xpath("//span[text() = 'Добавить информацию']");
     public static final By POSITION = By.xpath("//*[@id = 'position']");
     public static final By COMPANY = By.xpath("//*[@id = 'company']");
     public static final By START_WORK_MONTH = By.xpath("//*[@id = 'startMonth']");
@@ -54,9 +54,9 @@ public class CreateResumeElements {
     public static final By END_WORK_MONTH = By.xpath("//*[@id = 'endMonth']");
     public static final By END_WORK_YEAR = By.xpath("//*[@id = 'endYear']");
     public static final By DESCRIPTION = By.xpath("//*[@id = 'description']");
-    public static final By DELETE_INFORMATION_2 = By.xpath("//*[@id = 'yui_patched_v3_11_0_1_1523100819094_1852']");
+    public static final By DELETE_INFORMATION_2 = By.xpath("//span[text() = 'Удалить']");
 
-    public static final By TAB_MOTIVATION = By.xpath("//*[@id = 'yui_patched_v3_11_0_4_1523100819094_158']");
+    public static final By TAB_MOTIVATION = By.xpath("//*[@href = '#tab-3']");
     public static final By MATERIAL_INTEREST = By.xpath("//*[@id = 'motivationFactor_0']");
     public static final By STABILITY_AND_SECURITY = By.xpath("//*[@id = 'motivationFactor_1']");
     public static final By WORKING_CONDITIONS = By.xpath("//*[@id = 'motivationFactor_2']");
@@ -70,13 +70,13 @@ public class CreateResumeElements {
     public static final By TRAINING_AND_DEVELOPMENT = By.xpath("//*[@id = 'motivationFactor_10']");
     public static final By ACHIEVEMENT_OF_RESULTS = By.xpath("//*[@id = 'motivationFactor_11']");
 
-    public static final By TAB_REFERENCES = By.xpath("//*[@id = 'yui_patched_v3_11_0_4_1523100819094_209']");
-    public static final By ADD_INFORMATION_3 = By.xpath("//*[@id = 'yui_patched_v3_11_0_1_1523100819094_1477']");
+    public static final By TAB_REFERENCES = By.xpath("//*[@href = '#tab-6']");
+    public static final By ADD_INFORMATION_3 = By.xpath("//span[text() = 'Добавить информацию']");
     public static final By REC_NAME = By.xpath("//*[@id = 'recName']");
     public static final By REC_POSITION = By.xpath("//*[@id = 'recPosition']");
     public static final By REC_COMPANY = By.xpath("//*[@id = 'recCompany']");
     public static final By REC_TELEPHONE = By.xpath("//*[@id = 'recTelephone']");
-    public static final By DELETE_INFORMATION_3 = By.xpath("//*[@id = 'yui_patched_v3_11_0_1_1523100819094_3146']");
+    public static final By DELETE_INFORMATION_3 = By.xpath("//span[text() = 'Удалить']");
 
     public static final String noAvatar = "http://testing.cld.iba.by/TC-RecruitingAndOnboarding-portlet/common/css/images/no-avatar.jpg";
     public static final By PROFILE_IMAGE = By.xpath("//input[@id='profileImage']");
